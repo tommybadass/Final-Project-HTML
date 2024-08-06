@@ -1,0 +1,176 @@
+/* General styling for the whole website */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    background-image: url('../img/background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+/* Header styling */
+header {
+    background-color: #87CEEB;
+    color: #333333;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically centered */
+    padding: 0 2rem; /* Add horizontal padding */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo {
+    width: 20px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Main content styling */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex: 1; /* Allow the main content to grow and push footer to the bottom */
+    }
+
+/* Flexbox layout for the product images */
+main > div > div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
+}
+
+/* Ensure each product image and text are contained */
+main > div > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #808080;
+    padding: 1rem;
+    background-color: #000000;
+    max-width: 400px; /* Set max-width to match image width */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style for images */
+main > div > div > div img {
+    width: 300px; /* Fixed width for all images */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
+}
+
+#shop-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #000000;
+    max-width: 400px; /* Set max-width to match image width */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */ /* Include padding and border in the element's total width and height */
+}
+
+/* Style for images in shop */
+#shop-container > div img {
+    width: 300px; /* Fixed width for all images */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+#about-image {
+    width: 500px;
+    height: 300px;
+    align-items: center;
+}
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Position relative for footer to move with content */
+}
+main div div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for the flex items */
+}
+
+main div div div {
+    margin: 10px;
+}
+
+/* Footer styles */
+footer div {
+    margin: 20px 0;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Stack products vertically on small screens */
+    main > div > div {
+        flex-direction: column;
+    }
+
+    main > div > div > div {
+        margin-bottom: 1rem;
+    }
+}
